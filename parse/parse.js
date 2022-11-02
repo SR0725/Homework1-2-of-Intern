@@ -1,6 +1,6 @@
 const fs = require('fs')
 const studentsObj = JSON.parse(fs.readFileSync('raw_data.json', 'utf8'));
-let studentsList = Object.keys(studentsObj).map((key) => [key, ...Object.values(studentsObj[key])]).sort((a, b) => {
+const studentsList = Object.keys(studentsObj).map((key) => [key, ...Object.values(studentsObj[key])]).sort((a, b) => {
     if (a[1] < b[1]) {
         return -1;
     } else if (a[1] > b[1]) {

@@ -11,14 +11,17 @@ let px = 0;
 let py = 0;
 let count = 1;
 
+/**
+ * @description - 生成回型陣列
+ */
 function generateArray() {
     while (true) {
         outputArray[px][py] = count++;
-        
-        if (px < inputNumber - 1 && !outputArray[px + 1][py]) {  
+
+        if (px < inputNumber - 1 && !outputArray[px + 1][py]) {
             //向左
             px++;
-        }else if (py < inputNumber - 1 && !outputArray[px][py + 1]) {
+        } else if (py < inputNumber - 1 && !outputArray[px][py + 1]) {
             //向下
             py++;
         } else if (px > 0 && !outputArray[px - 1][py]) {
@@ -41,6 +44,9 @@ function generateArray() {
     }
 }
 
+/**
+ * @description - 印出整個陣列
+ */
 function output() {
     let ourputString = '';
     for (let y = 0; y < inputNumber; y++) {
